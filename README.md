@@ -8,7 +8,8 @@ The results of this lab are published here to serve as both a study reference an
 ---
 
 ## Topology
-![Lab Topology](diagrams/topology.png)
+
+<img width="1684" height="1550" alt="image" src="https://github.com/user-attachments/assets/66b8b8f3-87d2-4136-8b35-a051804d8098" />
 
 There are two separate routing domains that meet at **R0** in the center. R0 participates in both protocols but serves as a boundary in the baseline. No redistribution is configured yet (this will be a future step).
 
