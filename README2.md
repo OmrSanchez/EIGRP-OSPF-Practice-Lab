@@ -22,22 +22,10 @@ This lab demonstrates practical, production‑grade skills: scalable IGP design,
 ---
 
 ## 2) Topology (High Level)
-```
-[EIGRP domain]
-SW1 — R1 — R0 — R2 — SW2
-          |  
-          R3
-          |
-         R0-0  <— Border / ASBR between domains
-          |
-[OSPF Area 0]
-          R4 (ABR)
-        /  |   \
-   (A1)   (A1)  (A1)
-      R5 — R6 — R7 — SW4
-      |
-     SW3
-```
+
+<img width="1114" height="736" alt="image" src="https://github.com/user-attachments/assets/690e80dc-ef9e-4d3a-9785-7ed0eb95f0ad" />
+
+
 - **EIGRP domain:** R0, R1, R2, R3 (+ SW1/SW2 access VLANs).
 - **OSPF domain:** R4 (ABR), R5, R6, R7 (+ SW3/SW4 access VLANs). R0‑0 connects EIGRP ↔ OSPF Area 0.
 - **No redistribution on R4** (ABR does only inter‑area functions). All redistribution is centralized on **R0‑0**.
