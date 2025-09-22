@@ -16,9 +16,6 @@
 - Performed **bidirectional redistribution** on R0‑0: EIGRP→OSPF and OSPF→EIGRP using route‑maps, prefix‑lists, metrics, and **tags (100/200)** for loop prevention.  
 - Verified that **hosts in 10/20** can reach **30/40** and vice‑versa while **transit /30 links remain hidden** from the opposite domain.  
 
-**Why this matters to recruiters**  
-This lab demonstrates practical, production‑grade skills: scalable IGP design, controlled redistribution, failure‑resilient summaries, and clear verification/runbook discipline—exactly what mid‑level network engineers do in enterprise/defense environments.
-
 ---
 
 ## 2) Topology (High Level)
