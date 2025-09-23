@@ -102,8 +102,6 @@
    area 1 range 192.168.30.0 255.255.255.0
    area 1 range 192.168.40.0 255.255.255.0
   ```
-  
-> `summary-address` under `router ospf` is for **ASBR externals**. Inter‑area summaries must be configured on the **ABR** using `area <id> range` (as done on R4).
 
 ### 4.3 Redistribution Point – R0‑0
 - All redistribution centralized on R0‑0.  
