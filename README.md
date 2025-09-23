@@ -69,13 +69,13 @@
 | SW3 LAN | VLAN 20 | 192.168.30.64/26 | 
 | SW3 LAN | VLAN 30 | 192.168.30.128/26 | 
 | SW3 LAN | VLAN 40 | 192.168.30.192/26 |
-| **Summary** | — | **192.168.40.0/24** | Summarized by R4 ABR (area range) into Area 0 |
+| **Summary** | — | **192.168.30.0/24** | Summarized by R4 ABR (area range) into Area 0 |
 | SW4 LAN (behind R7) | Trunk G0/0 ↔ Subifs on R7 G0/2 | - | R7 ↔ SW4 |
 | SW4 LAN | VLAN 10 | 192.168.40.0/26 |
 | SW4 LAN | VLAN 20 | 192.168.40.64/26 | 
 | SW4 LAN | VLAN 30 | 192.168.40.128/26 | 
 | SW4 LAN | VLAN 40 | 192.168.40.192/26 |
-| **Summary** | — | **192.168.30.0/24** | Summarized by R4 ABR (area range) into Area 0 |
+| **Summary** | — | **192.168.40.0/24** | Summarized by R4 ABR (area range) into Area 0 |
 
 ### 3.3 Router IDs (OSPF/EIGRP)
 - **R0‑0:** 10.255.0.0 (seen in outputs)   
