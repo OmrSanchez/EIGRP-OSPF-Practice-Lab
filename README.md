@@ -1,17 +1,17 @@
 # EIGRP ↔ OSPF Redistribution Lab – Full Documentation
 
 **Author:** Omar D. Sanchez  
-**Focus:** Route summarization, ABR behavior, DR/BDR concepts, bidirectional redistribution with loop prevention, verification & troubleshooting.  
-**Tools:** GNS3/IOSv (or CML) with L2 switches for access VLANs.
+**Focus:** Route summarization, ABR behavior, bidirectional redistribution with loop prevention, verification & troubleshooting.  
+**Tools:** CML with CSR100V and L3 switches for access Routing and Switching with VLANs on L3 switches.
 
 ---
 
 ## 1) Lab Goal & Outcomes
-**Goal:** Build two routing domains—EIGRP (top) and OSPF (bottom)—and redistribute between them at a single border router (**R0-0**). Use summarization to keep each domain lean and implement route‑map tagging to prevent loops. Verify end‑to‑end reachability between user LANs without leaking transit links.
+**Goal:** Build two routing domains—EIGRP (top) and OSPF (bottom) and redistribute between them at a single border router (**R0-0**). Use summarization to keep each domain lean and implement route‑map tagging to prevent loops. Verify end‑to‑end reachability between user LANs without leaking transit links.
 
 **What was achieved**
 - Designed OSPF with **Area 0** and **Area 1**; **R4 is the ABR**.  
-- Implemented **inter‑area summarization** on the ABR (R4) with `area 1 range` to advertise `/24` summaries **192.168.30.0/24** and **192.168.40.0/24** into Area 0.  
+- Implemented **inter‑area summarization** on the ABR (R4) with `area 1 range` to advertise `/24` summaries **192.168.30.0/24** and **192.168.40.0/24** from Area 1 into Area 0.  
 - Implemented **EIGRP edge summaries** on R1/R2 toward SW1/SW2 so the EIGRP core only carries `/24` routes **192.168.10.0/24** and **192.168.20.0/24**.  
 - Performed **bidirectional redistribution** on R0‑0: EIGRP→OSPF and OSPF→EIGRP using route‑maps, prefix‑lists, metrics, and **tags (100/200)** for loop prevention.  
 - Verified that **hosts in 10/20** can reach **30/40** and vice‑versa while **transit /30 links remain hidden** from the opposite domain.  
