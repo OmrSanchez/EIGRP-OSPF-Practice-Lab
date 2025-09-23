@@ -73,17 +73,11 @@ interface Vlan30
 interface Vlan40
  ip address 192.168.20.194 255.255.255.192
 !
-ip forward-protocol nd
-!
-ip http server
-ip http secure-server
 !
 ip route 0.0.0.0 0.0.0.0 192.168.20.1
 ip route 0.0.0.0 0.0.0.0 192.168.20.65
 ip route 0.0.0.0 0.0.0.0 192.168.20.129
 ip route 0.0.0.0 0.0.0.0 192.168.20.193
-ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
-ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
 !
 !
 !
