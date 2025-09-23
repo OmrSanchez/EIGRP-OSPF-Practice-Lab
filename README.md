@@ -52,30 +52,33 @@
 ### 3.2 User VLANs / Access Networks
 | Site | VLAN/Interface | Subnet | Device |
 |---|---|---|---|
-| SW1 LAN (behind R1) | G0/0 (or subifs) | 192.168.10.0/26, /64, /128, /192 | R1 ↔ SW1 |
+| SW1 LAN (behind R1) | Trunk G0/0 ↔ R1 G1| - | R1 ↔ SW1 |
 | SW1 LAN | VLAN 10 | 192.168.10.0/26 |
 | SW1 LAN | VLAN 20 | 192.168.10.64/26 | 
 | SW1 LAN | VLAN 30 | 192.168.10.128/26 | 
 | SW1 LAN | VLAN 40 | 192.168.10.192/26 |
 | **Summary** | — | **192.168.10.0/24** | Summarized at R1 toward core |
-| SW2 LAN (behind R2) | G0/0 (or subifs) | 192.168.20.0/26, /64, /128, /192 | R2 ↔ SW2 |
+
+| SW2 LAN (behind R2) | Trunk G0/0 ↔ Subifs on R2 G2 | - | R2 ↔ SW2 |
 | SW2 LAN | VLAN 10 | 192.168.20.0/26 |
 | SW2 LAN | VLAN 20 | 192.168.20.64/26 | 
 | SW2 LAN | VLAN 30 | 192.168.20.128/26 | 
 | SW2 LAN | VLAN 40 | 192.168.20.192/26 |
 | **Summary** | — | **192.168.20.0/24** | Summarized at R2 toward core |
-| SW3 LAN (behind R5) | subifs on R5 G0/1 | 192.168.40.0/26, /64, /128, /192 | R5 ↔ SW3 |
+
+| SW3 LAN (behind R5) | Trunk G0/0 ↔ Subifs on R5 G0/0 | - | R5 ↔ SW3 |
 | SW3 LAN | VLAN 10 | 192.168.30.0/26 |
 | SW3 LAN | VLAN 20 | 192.168.30.64/26 | 
 | SW3 LAN | VLAN 30 | 192.168.30.128/26 | 
 | SW3 LAN | VLAN 40 | 192.168.30.192/26 |
-| **Summary** | — | **192.168.40.0/24** | Summarized by R4 (area range) into Area 0 |
-| SW4 LAN (behind R7) | subifs on R7 G0/2.{10,20,30,40} | 192.168.30.0/26, /64, /128, /192 | R7 ↔ SW4 |
+| **Summary** | — | **192.168.40.0/24** | Summarized by R4 ABR (area range) into Area 0 |
+
+| SW4 LAN (behind R7) | Trunk G0/0 ↔ Subifs on R7 G0/2 | - | R7 ↔ SW4 |
 | SW4 LAN | VLAN 10 | 192.168.40.0/26 |
 | SW4 LAN | VLAN 20 | 192.168.40.64/26 | 
 | SW4 LAN | VLAN 30 | 192.168.40.128/26 | 
 | SW4 LAN | VLAN 40 | 192.168.40.192/26 |
-| **Summary** | — | **192.168.30.0/24** | Summarized by R4 (area range) into Area 0 |
+| **Summary** | — | **192.168.30.0/24** | Summarized by R4 ABR (area range) into Area 0 |
 
 ### 3.3 Router IDs (OSPF/EIGRP)
 - **R0‑0:** 10.255.0.0 (seen in outputs)   
