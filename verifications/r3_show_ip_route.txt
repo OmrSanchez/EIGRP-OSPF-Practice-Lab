@@ -1,0 +1,22 @@
+      10.0.0.0/8 is variably subnetted, 14 subnets, 2 masks
+D        10.0.1.0/30 [90/15360] via 10.0.5.1, 22:38:51, GigabitEthernet1
+                     [90/15360] via 10.0.3.1, 22:38:51, GigabitEthernet3
+D        10.0.2.0/30 [90/15360] via 10.0.4.1, 22:38:34, GigabitEthernet2
+                     [90/15360] via 10.0.3.1, 22:38:34, GigabitEthernet3
+C        10.0.3.0/30 is directly connected, GigabitEthernet3
+L        10.0.3.2/32 is directly connected, GigabitEthernet3
+C        10.0.4.0/30 is directly connected, GigabitEthernet2
+L        10.0.4.2/32 is directly connected, GigabitEthernet2
+C        10.0.5.0/30 is directly connected, GigabitEthernet1
+L        10.0.5.2/32 is directly connected, GigabitEthernet1
+C        10.2.1.0/30 is directly connected, GigabitEthernet4
+L        10.2.1.2/32 is directly connected, GigabitEthernet4
+D        10.255.0.1/32 [90/10880] via 10.0.3.1, 22:38:51, GigabitEthernet3
+D        10.255.1.1/32 [90/10880] via 10.0.5.1, 22:38:51, GigabitEthernet1
+D        10.255.2.1/32 [90/10880] via 10.0.4.1, 22:38:34, GigabitEthernet2
+C        10.255.3.1/32 is directly connected, Loopback0
+D     192.168.10.0/24 [90/15360] via 10.0.5.1, 22:38:51, GigabitEthernet1
+D     192.168.20.0/24 [90/15360] via 10.0.4.1, 22:37:02, GigabitEthernet2
+D EX  192.168.30.0/24 [170/568320] via 10.2.1.1, 18:33:03, GigabitEthernet4
+D EX  192.168.40.0/24 [170/568320] via 10.2.1.1, 18:40:52, GigabitEthernet4
+R3#

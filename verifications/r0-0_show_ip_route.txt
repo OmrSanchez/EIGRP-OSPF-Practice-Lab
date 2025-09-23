@@ -1,0 +1,29 @@
+      10.0.0.0/8 is variably subnetted, 23 subnets, 2 masks
+D        10.0.1.0/30 [90/20480] via 10.2.1.2, 20:36:00, GigabitEthernet1
+D        10.0.2.0/30 [90/20480] via 10.2.1.2, 20:36:00, GigabitEthernet1
+D        10.0.3.0/30 [90/15360] via 10.2.1.2, 20:36:00, GigabitEthernet1
+D        10.0.4.0/30 [90/15360] via 10.2.1.2, 20:36:00, GigabitEthernet1
+D        10.0.5.0/30 [90/15360] via 10.2.1.2, 20:36:00, GigabitEthernet1
+O IA     10.0.6.0/30 [110/2] via 10.1.1.2, 21:32:23, GigabitEthernet2
+O IA     10.0.7.0/30 [110/2] via 10.1.1.2, 21:32:23, GigabitEthernet2
+O IA     10.0.8.0/30 [110/2] via 10.1.1.2, 21:32:23, GigabitEthernet2
+O IA     10.0.9.0/30 [110/3] via 10.1.1.2, 21:18:14, GigabitEthernet2
+O IA     10.0.10.0/30 [110/3] via 10.1.1.2, 21:14:06, GigabitEthernet2
+C        10.1.1.0/30 is directly connected, GigabitEthernet2
+L        10.1.1.1/32 is directly connected, GigabitEthernet2
+C        10.2.1.0/30 is directly connected, GigabitEthernet1
+L        10.2.1.1/32 is directly connected, GigabitEthernet1
+C        10.255.0.0/32 is directly connected, Loopback0
+D        10.255.0.1/32 [90/16000] via 10.2.1.2, 20:36:00, GigabitEthernet1
+D        10.255.1.1/32 [90/16000] via 10.2.1.2, 20:36:00, GigabitEthernet1
+D        10.255.2.1/32 [90/16000] via 10.2.1.2, 20:36:00, GigabitEthernet1
+D        10.255.3.1/32 [90/10880] via 10.2.1.2, 20:36:00, GigabitEthernet1
+O        10.255.4.1/32 [110/2] via 10.1.1.2, 21:32:23, GigabitEthernet2
+O IA     10.255.5.1/32 [110/3] via 10.1.1.2, 21:18:14, GigabitEthernet2
+O IA     10.255.6.1/32 [110/3] via 10.1.1.2, 21:14:01, GigabitEthernet2
+O IA     10.255.7.1/32 [110/3] via 10.1.1.2, 18:29:25, GigabitEthernet2
+D     192.168.10.0/24 [90/20480] via 10.2.1.2, 20:36:00, GigabitEthernet1
+D     192.168.20.0/24 [90/20480] via 10.2.1.2, 20:36:00, GigabitEthernet1
+O IA  192.168.30.0/24 [110/3] via 10.1.1.2, 18:29:25, GigabitEthernet2
+O IA  192.168.40.0/24 [110/3] via 10.1.1.2, 20:47:35, GigabitEthernet2
+R0-0#

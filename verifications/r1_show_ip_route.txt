@@ -1,0 +1,30 @@
+      10.0.0.0/8 is variably subnetted, 12 subnets, 2 masks
+C        10.0.1.0/30 is directly connected, GigabitEthernet2
+L        10.0.1.2/32 is directly connected, GigabitEthernet2
+D        10.0.2.0/30 [90/15360] via 10.0.1.1, 22:42:43, GigabitEthernet2
+D        10.0.3.0/30 [90/15360] via 10.0.5.2, 22:42:43, GigabitEthernet3
+                     [90/15360] via 10.0.1.1, 22:42:43, GigabitEthernet2
+D        10.0.4.0/30 [90/15360] via 10.0.5.2, 22:39:15, GigabitEthernet3
+C        10.0.5.0/30 is directly connected, GigabitEthernet3
+L        10.0.5.1/32 is directly connected, GigabitEthernet3
+D        10.2.1.0/30 [90/15360] via 10.0.5.2, 20:40:19, GigabitEthernet3
+D        10.255.0.1/32 [90/10880] via 10.0.1.1, 22:42:43, GigabitEthernet2
+C        10.255.1.1/32 is directly connected, Loopback0
+D        10.255.2.1/32 [90/16000] via 10.0.5.2, 22:39:15, GigabitEthernet3
+                       [90/16000] via 10.0.1.1, 22:39:15, GigabitEthernet2
+D        10.255.3.1/32 [90/10880] via 10.0.5.2, 22:42:34, GigabitEthernet3
+      192.168.10.0/24 is variably subnetted, 9 subnets, 3 masks
+D        192.168.10.0/24 is a summary, 22:47:21, Null0
+C        192.168.10.0/26 is directly connected, GigabitEthernet1.10
+L        192.168.10.1/32 is directly connected, GigabitEthernet1.10
+C        192.168.10.64/26 is directly connected, GigabitEthernet1.20
+L        192.168.10.65/32 is directly connected, GigabitEthernet1.20
+C        192.168.10.128/26 is directly connected, GigabitEthernet1.30
+L        192.168.10.129/32 is directly connected, GigabitEthernet1.30
+C        192.168.10.192/26 is directly connected, GigabitEthernet1.40
+L        192.168.10.193/32 is directly connected, GigabitEthernet1.40
+D     192.168.20.0/24 [90/20480] via 10.0.5.2, 22:37:42, GigabitEthernet3
+                      [90/20480] via 10.0.1.1, 22:37:42, GigabitEthernet2
+D EX  192.168.30.0/24 [170/573440] via 10.0.5.2, 18:33:44, GigabitEthernet3
+D EX  192.168.40.0/24 [170/573440] via 10.0.5.2, 18:41:33, GigabitEthernet3
+R1#
