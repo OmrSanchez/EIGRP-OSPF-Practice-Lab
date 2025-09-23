@@ -151,7 +151,7 @@ router eigrp MAIN
 
 ---
 
-## 9) Skills Demonstrated
+## 5) Skills Demonstrated
 - **IGP Design & Hierarchy:** Built OSPF backbone/area architecture; identified and used an **ABR** correctly.  
 - **Route Summarization:** Implemented **EIGRP interface summaries** and **OSPF inter‑area summaries** to reduce LSDB size and routing churn.  
 - **Controlled Redistribution:** Centralized at a single border (**R0‑0**), filtered to business‑relevant **/24s**, and applied **administrative tags** to prevent loops—mirrors enterprise change‑control standards.  
@@ -162,7 +162,7 @@ router eigrp MAIN
 
 ---
 
-## 11) Device Snippets
+## 6) Device Snippets
 > **R4 (ABR) – OSPF area range**
 ```cisco
 router ospf 1
@@ -208,6 +208,6 @@ router eigrp MAIN
 
 ---
 
-## 12) Credits
+## 7) Credits
 Topology and implementation by **Omar D. Sanchez**. Screenshots/diagrams to be added in `/diagrams`. All configs and `show` outputs captured from the live lab.
 
