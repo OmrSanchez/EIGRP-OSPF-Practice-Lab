@@ -49,8 +49,6 @@
 | R5 ↔ R6 | 10.0.9.0/30 | R5 G0/2 | R6 G0/1 | OSPF **Area 1** |
 | R6 ↔ R7 | 10.0.10.0/30 | R6 G0/0 | R7 G0/1 | OSPF **Area 1** |
 
-> **Note:** Interface letters match the diagram labels. If your device slot/port numbers differ, keep subnets the same and adjust interface IDs in configs.
-
 ### 3.2 User VLANs / Access Networks
 | Site | VLAN/Interface | Subnet | Device |
 |---|---|---|---|
@@ -104,8 +102,7 @@
    area 1 range 192.168.30.0 255.255.255.0
    area 1 range 192.168.40.0 255.255.255.0
   ```
-- Expected in R0‑0’s RIB (pre‑redistribution): `O IA 192.168.30.0/24` and `O IA 192.168.40.0/24` only.
-
+  
 > `summary-address` under `router ospf` is for **ASBR externals**. Inter‑area summaries must be configured on the **ABR** using `area <id> range` (as done on R4).
 
 ### 4.3 Redistribution Point – R0‑0
