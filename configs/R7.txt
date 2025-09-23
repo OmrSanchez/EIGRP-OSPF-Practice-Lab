@@ -96,13 +96,6 @@ router ospf 1
  network 10.255.7.1 0.0.0.0 area 1
  network 192.168.30.0 0.0.0.255 area 1
 !
-ip forward-protocol nd
-!
-ip http server
-ip http secure-server
-!
-ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
-ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
 !
 !
 !
