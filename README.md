@@ -162,52 +162,6 @@ router eigrp MAIN
 
 ---
 
-## 6) Device Snippets
-> **R4 (ABR) – OSPF area range**
-```cisco
-router ospf 1
- router-id 10.255.4.1
- network 10.1.1.0 0.0.0.3 area 0
- network 10.0.6.0 0.0.0.3 area 1
- network 10.0.7.0 0.0.0.3 area 1
- network 10.0.8.0 0.0.0.3 area 1
- area 1 range 192.168.30.0 255.255.255.0
- area 1 range 192.168.40.0 255.255.255.0
-```
-
-> **R0‑0 – Redistribution both ways**
-```cisco
-ip prefix-list E2O_ALLOWED seq 5  permit 192.168.10.0/24
-ip prefix-list E2O_ALLOWED seq 10 permit 192.168.20.0/24
-ip prefix-list O2E_ALLOWED seq 5  permit 192.168.30.0/24
-ip prefix-list O2E_ALLOWED seq 10 permit 192.168.40.0/24
-!
-route-map EIGRP-TO-OSPF deny 5
- match tag 200
-route-map EIGRP-TO-OSPF permit 10
- match ip address prefix-list E2O_ALLOWED
- set tag 100
- set metric 20
- set metric-type type-2
-!
-route-map OSPF-TO-EIGRP deny 5
- match tag 100
-route-map OSPF-TO-EIGRP permit 10
- match ip address prefix-list O2E_ALLOWED
- set tag 200
- set metric 100000 100 255 1 1500
-!
-router ospf 1
- router-id 10.255.0.0
- redistribute eigrp 100 route-map EIGRP-TO-OSPF
-!
-router eigrp MAIN
- address-family ipv4 unicast autonomous-system 100
-  redistribute ospf 1 route-map OSPF-TO-EIGRP
-```
-
----
-
 ## 7) Credits
 Topology and implementation by **Omar D. Sanchez**. Screenshots/diagrams to be added in `/diagrams`. All configs and `show` outputs captured from the live lab.
 
